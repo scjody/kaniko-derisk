@@ -8,10 +8,8 @@ RUN apt-get update && \
     apt-get install -y less \
     && rm -rf /var/lib/apt/lists/*
 
-RUN <<EOF
-find / -type f >/files
-pwd > /pwd
-mount > /mount
-set > /set
-ps auxeww > /ps
-EOF
+RUN find / -type f >/files && \
+    pwd > /pwd && \
+    mount > /mount && \
+    set > /set && \
+    ps auxeww > /ps
