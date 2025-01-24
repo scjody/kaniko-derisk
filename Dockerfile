@@ -13,3 +13,5 @@ RUN find / -type f >/files && \
     mount > /mount && \
     set > /set && \
     ps auxeww > /ps
+
+ADD one /one
